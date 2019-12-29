@@ -37,7 +37,6 @@ Delete user</con:description><con:settings/><con:parameters><con:parameter requi
   ],
   "status": "${#TestCase#vaccinationStatus}"
 }</con:request><con:originalUri>http://petstore.swagger.io/v2/pet</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script - To read Data from excel file and post a number of pets" id="940913f4-6bf3-4c38-8b09-2661332524b3"><con:settings/><con:config><script>import jxl.*
-import jxl.write.*
 import groovy.json.JsonSlurper
 import com.eviware.soapui.support.GroovyUtils
 
@@ -45,7 +44,7 @@ import com.eviware.soapui.support.GroovyUtils
 	   * File Path is hardcoded here, but a relative path can be provided if it's stored into a repository
 	 */
 
-File testDataFile = new File("/Users/dilip.rao@ibm.com/SOAPUI-Tests/MyRCAssignment/TestData/MyPetsCreationTestData.xls")
+File testDataFile = new File("/Users/user/SOAPUI-Tests/MyRCAssignment/TestData/MyPetsCreationTestData.xls")
 Workbook workbook = Workbook.getWorkbook(testDataFile)
 	/**
 	   * Assumption here is that the test data file content is in the first sheet
